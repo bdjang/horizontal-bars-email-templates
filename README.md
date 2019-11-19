@@ -1,12 +1,8 @@
 # Data Bars in Email Templates
 
-* [Browsersync + Gulp.js](https://browsersync.io/docs/gulp)
-
 ## Background
 
-A simple, straight-forward way to display data bars in email templates is by using `<td>` cells and the `background-color` property.
-
-Why display data using HTML/CSS code instead of in an image? You can adjust HTML/CSS data for different screen sizes, data will automatically display when users open the email (not the case for images as some users have auto-loading images turned off in their email use of choice), and it's fun/challenging/and I'll respect you more for it.
+By using `<td>` cells and the `background-color` property, you can display data bars in email templates.
 
 ```html
 <table width="600">
@@ -16,7 +12,7 @@ Why display data using HTML/CSS code instead of in an image? You can adjust HTML
 </table>
 ```
 
-Adding additional `<td>` cells and adjusting the widths creates different sections within the data bar:
+Adding additional `<td>` cells and adjusting the widths will create different sections within the data bar:
 
 ```html
 <table width="600">
@@ -85,5 +81,3 @@ Adding labels and text inside the data bar or underneath it
   </tr>
 </table>
 ```
-
-Support for `<td>` cells and for these data bars is strong. Many email clients support this.
