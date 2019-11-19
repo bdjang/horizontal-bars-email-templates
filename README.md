@@ -11,7 +11,7 @@ Why display data using HTML/CSS code instead of in an image? You can adjust HTML
 ```html
 <table width="600">
   <tr>
-    <td bgcolor="#0dbd67" height="30" width="600"></td>
+    <td height="30" width="600" style="background-color: #0dbd67;"></td>
   </tr>
 </table>
 ```
@@ -21,9 +21,9 @@ Adding additional `<td>` cells and adjusting the widths creates different sectio
 ```html
 <table width="600">
   <tr>
-    <td bgcolor="#0dbd67" height="30" width="200"></td>
-    <td bgcolor="#86deb3" height="30" width="200"></td>
-	<td bgcolor="#dbdbdb" height="30" width="200"></td>
+    <td height="30" width="200" style="background-color: #0dbd67;"></td>
+    <td height="30" width="200" style="background-color: #86deb3;"></td>
+    <td height="30" width="200" style="background-color: #dbdbdb;"></td>
   </tr>
 </table>
 ```
@@ -49,9 +49,9 @@ Adding additional `<td>` cells and adjusting the widths creates different sectio
 ```html
 <table width="600">
   <tr>
-    <td bgcolor="#0dbd67" height="30" width="200" class="data1"></td>
-    <td bgcolor="#86deb3" height="30" width="200" class="data2"></td>
-	<td bgcolor="#dbdbdb" height="30" width="200" class="data3"></td>
+    <td height="30" width="200" style="background-color: #0dbd67;" class="data1"></td>
+    <td height="30" width="200" style="background-color: #86deb3;" class="data2"></td>
+    <td height="30" width="200" style="background-color: #dbdbdb;" class="data3"></td>
   </tr>
 </table>
 ```
