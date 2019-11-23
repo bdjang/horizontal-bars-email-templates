@@ -2,7 +2,11 @@
 
 ## Background
 
-Images are not the only way to display data in email templates. It's the most common and often easiest way but that doesn't mean it's the best way. Below is a guide on displaying horizontal data bars.
+Using images is the most common way to display data in email templates. An alternative way to display data (in this case horizontal data bars) is laid out below. Here are some advantages of using this method of displaying data:
+
+* Not all users have auto-loading images turned on in their preferred email clients. Data coded in HTML/CSS will be automatically display when the user opens the email.
+* For email clients that allow it, hover states can add a level of interactivity to data bars in email templates.
+* Data bars coded in HTML/CSS can be more readable and customized for mobile devices. Data in images are not mobile responsive - they can be difficult to view on mobile devices.
 
 ## Basics
 
@@ -94,7 +98,7 @@ Adding labels and text inside the data bar or underneath it
 
 ![databar4](https://user-images.githubusercontent.com/6575035/69486225-91b7cd00-0e17-11ea-88fd-3ddc997db72f.png)
 
-### Putting It All Together
+## Putting It All Together
 
 By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without relying on images.
 
