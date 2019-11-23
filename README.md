@@ -2,6 +2,10 @@
 
 ## Background
 
+Images are not the only way to display data in email templates. It's the most common and often easiest way but that doesn't mean it's the best way. Below is a guide on displaying horizontal data bars.
+
+## Basics
+
 By using `<td>` cells and the `background-color` property, you can display data bars in email templates.
 
 ```html
@@ -11,6 +15,8 @@ By using `<td>` cells and the `background-color` property, you can display data 
   </tr>
 </table>
 ```
+
+![databar1](https://user-images.githubusercontent.com/6575035/69486216-6fbe4a80-0e17-11ea-8858-14505fc43bc2.png)
 
 Adding additional `<td>` cells and adjusting the widths will create different sections within the data bar:
 
@@ -23,6 +29,8 @@ Adding additional `<td>` cells and adjusting the widths will create different se
   </tr>
 </table>
 ```
+
+![databar2](https://user-images.githubusercontent.com/6575035/69486219-7c42a300-0e17-11ea-9635-f87b4a8acb1b.png)
 
 ## Customizing Data Bars
 
@@ -65,6 +73,8 @@ Adjusting the `background` property and the `linear-gradient` value
 </table>
 ```
 
+![databar3](https://user-images.githubusercontent.com/6575035/69486223-895f9200-0e17-11ea-8458-e389413c2d17.png)
+
 ### Data labels
 
 Adding labels and text inside the data bar or underneath it
@@ -81,3 +91,11 @@ Adding labels and text inside the data bar or underneath it
   </tr>
 </table>
 ```
+
+![databar4](https://user-images.githubusercontent.com/6575035/69486225-91b7cd00-0e17-11ea-88fd-3ddc997db72f.png)
+
+### Putting It All Together
+
+By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without relying on images.
+
+![databar5](https://user-images.githubusercontent.com/6575035/69486240-d2174b00-0e17-11ea-824c-aa04b13a8195.png)
