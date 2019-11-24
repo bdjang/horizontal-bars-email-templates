@@ -10,7 +10,7 @@ Using images is the most common way to display data in email templates. One alte
 
 ## Basics
 
-By using `<td>` cells and the `background-color` property, you can display data bars in email templates.
+By using `<td>` cells and the `background-color` property, you can easily create a data bar in email.
 
 ```html
 <table width="600">
@@ -81,7 +81,7 @@ Adjusting the `background` property and the `linear-gradient` value
 
 ### Data labels
 
-Adding labels and text inside the data bar or underneath it
+You can add helpful information by adding labels inside or underneath to these data bars.
 
 ```html
 <table width="600">
@@ -100,6 +100,6 @@ Adding labels and text inside the data bar or underneath it
 
 ## Putting It All Together
 
-By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without relying on images.
+By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without using images.
 
 ![databar5](https://user-images.githubusercontent.com/6575035/69486240-d2174b00-0e17-11ea-824c-aa04b13a8195.png)
