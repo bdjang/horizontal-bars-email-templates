@@ -2,11 +2,11 @@
 
 ## Background
 
-Using images is the most common way to display data in email templates. An alternative way to display data (in this case horizontal data bars) is laid out below. Here are some advantages of using this method of displaying data:
+Using images is the most common way to display data in email templates. One alternative way to display data is laid out below. Here are some advantages of using this method to display data:
 
-* Not all users have auto-loading images turned on in their preferred email clients. Data coded in HTML/CSS will be automatically display when the user opens the email.
-* For email clients that allow it, hover states can add a level of interactivity to data bars in email templates.
+* Some users have turned off auto-loading images in their preferred email clients. Data coded in HTML/CSS will display automatically when the user open the email.
 * Data bars coded in HTML/CSS can be more readable and customized for mobile devices. Data in images are not mobile responsive - they can be difficult to view on mobile devices.
+* For email clients that allow it, hover states can add a level of interactivity to data bars in email templates.
 
 ## Basics
 
@@ -38,6 +38,21 @@ Adding additional `<td>` cells and adjusting the widths will create different se
 
 ## Customizing Data Bars
 
+### Adding a linear gradient
+
+Adjusting the `background` property and the `linear-gradient` value
+
+```html
+<table width="600">
+  <tr>
+    <td height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67;"></td>
+    <td height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300;"></td>
+  </tr>
+</table>
+```
+
+![databar3](https://user-images.githubusercontent.com/6575035/69486223-895f9200-0e17-11ea-8458-e389413c2d17.png)
+
 ### Adding interactive hover states
 
 ```css
@@ -63,21 +78,6 @@ Adding additional `<td>` cells and adjusting the widths will create different se
   </tr>
 </table>
 ```
-
-### Adding a linear gradient
-
-Adjusting the `background` property and the `linear-gradient` value
-
-```html
-<table width="600">
-  <tr>
-    <td height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67;"></td>
-    <td height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300;"></td>
-  </tr>
-</table>
-```
-
-![databar3](https://user-images.githubusercontent.com/6575035/69486223-895f9200-0e17-11ea-8458-e389413c2d17.png)
 
 ### Data labels
 
