@@ -5,7 +5,7 @@
 Using images is the most common way to display data in email templates. One alternative way to display data is to code data bars in HTML/CSS. Here are some advantages of using this method:
 
 * Some users have turned off auto-loading images in their preferred email clients. Data coded in HTML/CSS will display automatically when the user opens the email.
-* Data bars coded in HTML/CSS can be more readable and customized for mobile devices. Data in images are not mobile responsive - they can be difficult to view on mobile devices.
+* Data bars coded in HTML/CSS can be more readable and customized for mobile devices. Data in images are not mobile responsive - they can be difficult to view on smaller screens.
 * For email clients that allow it, hover states can add a level of interactivity to data bars in email templates.
 
 ## Basics
@@ -78,6 +78,8 @@ Adjusting the `background` property and the `linear-gradient` value
   </tr>
 </table>
 ```
+
+![Demo of interactive data bars](https://user-images.githubusercontent.com/6575035/69917960-2fc01e80-143a-11ea-8ab7-9438352ba921.gif)
 
 ### Data labels
 
