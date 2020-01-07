@@ -53,7 +53,7 @@ Adjusting the `background` property and the `linear-gradient` value
 
 ![databar3](https://user-images.githubusercontent.com/6575035/69486223-895f9200-0e17-11ea-8458-e389413c2d17.png)
 
-For **Yahoo!** Mail and **Outlook.com** email clients, this CSS property does not work and the result will be a multi-colored data bar. For a fallback, add `background-color` after the `linear-gradient` which will display the data bar in one solid color.
+For **Yahoo! Mail** and **Outlook.com** email clients, this CSS property does not work and the result will be a multi-colored data bar. For a fallback, add `background-color` after the `linear-gradient` which will display the data bar in one solid color.
 
 ```html
 <table width="600">
@@ -73,8 +73,8 @@ For **Outlook** email clients, you will need to use Vector Markup Language (VML)
   <v:fill type="gradient" color="#0dbd67" color2="#10ed81" angle="90" />
   <table width="560" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019</td>
-      <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$98,200.72</td>
+      <td align="left"></td>
+      <td align="right"></td>
     </tr>
   </table>
 </v:shape>
