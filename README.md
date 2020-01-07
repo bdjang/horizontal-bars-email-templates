@@ -45,13 +45,41 @@ Adjusting the `background` property and the `linear-gradient` value
 ```html
 <table width="600">
   <tr>
+    <td height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%);"></td>
+    <td height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%);"></td>
+  </tr>
+</table>
+```
+
+![databar3](https://user-images.githubusercontent.com/6575035/69486223-895f9200-0e17-11ea-8458-e389413c2d17.png)
+
+For **Yahoo!** Mail and **Outlook.com** email clients, this CSS property does not work and the result will be a multi-colored data bar. For a fallback, add `background-color` after the `linear-gradient` which will display the data bar in one solid color.
+
+```html
+<table width="600">
+  <tr>
     <td height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67;"></td>
     <td height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300;"></td>
   </tr>
 </table>
 ```
 
-![databar3](https://user-images.githubusercontent.com/6575035/69486223-895f9200-0e17-11ea-8458-e389413c2d17.png)
+For **Outlook** email clients, you will need to use Vector Markup Language (VML) to achieve the linear-gradient look for these data bars.
+
+```html
+<!--[if mso]>
+<v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+  <v:stroke opacity="0" />
+  <v:fill type="gradient" color="#0dbd67" color2="#10ed81" angle="90" />
+  <table width="560" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019</td>
+      <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$98,200.72</td>
+    </tr>
+  </table>
+</v:shape>
+<![endif]-->
+```
 
 ### Adding interactive hover states
 
@@ -79,7 +107,7 @@ Adjusting the `background` property and the `linear-gradient` value
 </table>
 ```
 
-![Demo of interactive data bars](https://user-images.githubusercontent.com/6575035/69917960-2fc01e80-143a-11ea-8ab7-9438352ba921.gif)
+![databar4](https://user-images.githubusercontent.com/6575035/69917960-2fc01e80-143a-11ea-8ab7-9438352ba921.gif)
 
 ### Data labels
 
@@ -98,10 +126,10 @@ You can add helpful information by adding labels inside or underneath to these d
 </table>
 ```
 
-![databar4](https://user-images.githubusercontent.com/6575035/69486225-91b7cd00-0e17-11ea-88fd-3ddc997db72f.png)
+![databar5](https://user-images.githubusercontent.com/6575035/69486225-91b7cd00-0e17-11ea-88fd-3ddc997db72f.png)
 
 ## Putting It All Together
 
 By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without using images.
 
-![databar5](https://user-images.githubusercontent.com/6575035/69486240-d2174b00-0e17-11ea-824c-aa04b13a8195.png)
+![databar6](https://user-images.githubusercontent.com/6575035/69486240-d2174b00-0e17-11ea-824c-aa04b13a8195.png)
