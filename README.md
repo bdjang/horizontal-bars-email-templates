@@ -5,6 +5,7 @@
 Using images is the most common way to display data in email templates. One alternative way to display data is to code data bars in HTML/CSS. Here are some advantages of using this method:
 
 * Some users have turned off auto-loading images in their preferred email clients. Data coded in HTML/CSS will display automatically when the user opens the email.
+* If an image is replaced with data bars coded in HTML/CSS, the total email load time will be faster.
 * Data bars coded in HTML/CSS can be more readable and customized for mobile devices. Data in images are not mobile responsive - they can be difficult to view on smaller screens.
 * For email clients that allow it, hover states can add a level of interactivity to data bars in email templates.
 
@@ -40,7 +41,7 @@ Adding additional `<td>` cells and adjusting the widths will create different se
 
 ### Adding a linear gradient
 
-Adjusting the `background` property and the `linear-gradient` value
+Adjusting the `background` property and the `linear-gradient` value will create a smooth transition of colors in the data bars:
 
 ```html
 <table width="600">
@@ -86,13 +87,10 @@ For **Outlook** email clients, you will need to use Vector Markup Language (VML)
 ```css
 <style type="text/css">
   .data1:hover {
-    background-color: #3dca85 !important;
+    background: linear-gradient(to right, #10ed81 0%, #10ed81 100%) !important;
   }
   .data2:hover {
-    background-color: #9ee4c2 !important;
-  }
-  .data3:hover {
-    background-color: #e2e2e2 !important;
+    background: linear-gradient(to right, #ffaa00 0%, #ffaa00 100%) !important;
   }
 </style>
 ```
@@ -100,9 +98,8 @@ For **Outlook** email clients, you will need to use Vector Markup Language (VML)
 ```html
 <table width="600">
   <tr>
-    <td height="30" width="200" style="background-color: #0dbd67;" class="data1"></td>
-    <td height="30" width="200" style="background-color: #86deb3;" class="data2"></td>
-    <td height="30" width="200" style="background-color: #dbdbdb;" class="data3"></td>
+    <td height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67;" class="data1"></td>
+    <td height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300;" class="data2"></td>
   </tr>
 </table>
 ```
@@ -111,17 +108,17 @@ For **Outlook** email clients, you will need to use Vector Markup Language (VML)
 
 ### Data labels
 
-You can add helpful information by adding labels inside or underneath to these data bars.
+You can add helpful information by including labels inside or underneath the data bars.
 
 ```html
 <table width="600">
   <tr>
     <td width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
-    <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #FF8300 100%); background-color: #FF8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
+    <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
   </tr>
   <tr>
     <td align="right" valign="middle" width="300" style="color: #0dbd67; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$12,345.00</td>
-    <td align="right" valign="middle" width="300" style="color: #FF8300; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$67,890.00</td>
+    <td align="right" valign="middle" width="300" style="color: #ff8300; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$67,890.00</td>
   </tr>
 </table>
 ```
