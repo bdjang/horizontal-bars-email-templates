@@ -72,7 +72,7 @@ For **Outlook** email clients, you will need to use Vector Markup Language (VML)
 <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
   <v:stroke opacity="0" />
   <v:fill type="gradient" color="#0dbd67" color2="#10ed81" angle="90" />
-  <table width="560" border="0" cellspacing="0" cellpadding="0">
+  <table width="560" border="0" cellspacing="0" cellpadding="0" style="width: 560px; height: 31px;">
     <tr>
       <td align="left"></td>
       <td align="right"></td>
@@ -81,6 +81,8 @@ For **Outlook** email clients, you will need to use Vector Markup Language (VML)
 </v:shape>
 <![endif]-->
 ```
+
+You will need to add the `width` and `height` inline in the `table` element for Outlook DPI clients. This will allow the text for [data labels](https://github.com/bdjang/data-bars-email-templates#data-labels) to align correctly in the data bar.
 
 ### Adding interactive hover states
 
