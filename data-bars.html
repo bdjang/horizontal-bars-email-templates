@@ -125,8 +125,8 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em; padding: 0;">Labels</td>
                         </tr>
                         <tr>
-                            <td width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
-                            <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #FF8300 100%); background-color: #FF8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
+                            <td width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
+                            <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #FF8300 100%); background-color: #FF8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
                         </tr>
                         <tr>
                             <td align="right" valign="middle" width="300" style="color: #0dbd67; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$12,345.00</td>
@@ -140,6 +140,17 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
         </table>
 
         <!-- SAMPLE SUMMARY REPORT -->
+
+        <!-- Formula to calculate accurate data bar widths:
+            1. Set the largest data bar as your max length
+            2. Divide each other number by the largest data bar number (x/max_length)
+            3. Multiply by 560 (or the total width the data bars). That number is the total width of your data bar relative to your largest data bar
+            4. Use '&nbsp;' to create spaces instead of using padding; padding extends the length of the data bar which creates an inaccurate result
+            
+            Example:
+            ($37,427.00/$77,241.12) = 0.4845476088 * 560 = 271.346
+            So for that figure, the width of the data bar is 271px -->
+
         <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
             <tr>
                 <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; padding: 40px 0 0 0;">
@@ -151,8 +162,28 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
                                 <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2019 Q1</td>
-                                        <td class="revP1" width="460" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$77,241.12</td>
+                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q1</td>
+                                        <td class="revP1" width="460" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$77,241.12&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
+                                <table role="presentation" width="271" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q1</td>
+                                        <td class="revP2" width="171" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$37,427.00&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
+                                <table role="presentation" width="507" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q2</td>
+                                        <td class="revP1" width="407" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$69,981.10&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
@@ -161,31 +192,28 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
                                 <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2018 Q1</td>
-                                        <td class="revP2" width="248" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$37,427.00</td>
-                                        <td width="232" align="right" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31"></td>
+                                        <td class="revP2" width="146" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q2</td>
+                                        <td width="414" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;$20,184.22</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
-                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="380" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2019 Q2</td>
-                                        <td class="revP1" width="410" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$69,981.10</td>
-                                        <td width="50" style="line-height: 1px; margin: 0; padding: 0; text-align: right;" bgcolor="#ffffff" height="31"></td>
+                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q3</td>
+                                        <td class="revP1" width="280" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$52,419.71&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
-                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="181" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2018 Q2</td>
-                                        <td class="revP2" width="129" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$20,184.22</td>
-                                        <td width="331" align="right" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31"></td>
+                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q3</td>
+                                        <td class="revP2" width="81" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">&nbsp;$24,912.18</td>
                                     </tr>
                                 </table>
                             </td>
@@ -194,42 +222,18 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
                                 <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2019 Q3</td>
-                                        <td class="revP1" width="315" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$52,419.71</td>
-                                        <td width="145" style="line-height: 1px; margin: 0; padding: 0; text-align: right;" bgcolor="#ffffff" height="31"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
-                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2018 Q3</td>
-                                        <td class="revP2" width="152" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$24,912.18</td>
-                                        <td width="308" align="right" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
-                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2019 Q4</td>
-                                        <td class="revP1" width="24" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31"></td>
-                                        <td width="436" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px; text-align: left;" bgcolor="#ffffff" height="31">$1,713.17</td>
+                                        <td class="revP1" width="85" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q4</td>
+                                        <td width="475" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0; text-align: left;" bgcolor="#ffffff" height="31">&nbsp;$11,713.17</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td align="left" colspan="3" style="padding: 1px 20px 30px 20px;">
-                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="245" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2018 Q4</td>
-                                        <td class="revP2" width="207" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$33,761.31</td>
-                                        <td width="253" align="right" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31"></td>
+                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q4</td>
+                                        <td class="revP2" width="145" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$33,761.31&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
