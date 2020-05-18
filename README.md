@@ -115,8 +115,8 @@ You can add helpful information by including labels inside or underneath the dat
 ```html
 <table width="600">
   <tr>
-    <td width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
-    <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">Label</td>
+    <td width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
+    <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
   </tr>
   <tr>
     <td align="right" valign="middle" width="300" style="color: #0dbd67; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$12,345.00</td>
@@ -131,4 +131,4 @@ You can add helpful information by including labels inside or underneath the dat
 
 By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without using images.
 
-![databar6](https://user-images.githubusercontent.com/6575035/69486240-d2174b00-0e17-11ea-824c-aa04b13a8195.png)
+![databar6](https://user-images.githubusercontent.com/6575035/82163820-56a0ce80-987b-11ea-956a-7974f514bf8b.png)
