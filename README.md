@@ -1,5 +1,7 @@
 # Data Bars in Email Templates
 
+* [Vertical Data Bars in Email Templates](https://github.com/bdjang/vertical-bars-email-templates#vertical-data-bars-in-email-templates)
+
 ## Background
 
 Using images is the most common way to display data in email templates. One alternative way to display data is to code data bars in HTML/CSS. Here are some advantages of using this method:
