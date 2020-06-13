@@ -36,15 +36,26 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
         line-height: inherit !important;
     }
 
-    /* HOVER STYLES */
-    .revP1:hover {
+    /* HOVER STYLES LINEAR GRADIENT */
+    .hoverGreen:hover {
         background: linear-gradient(to right, #10ed81 0%, #10ed81 100%) !important;
     }
-    .revP2:hover {
+    .hoverGray:hover {
         background: linear-gradient(to right, #e2e6ef 0%, #e2e6ef 100%) !important;
     }
-    .revP3:hover {
+    .hoverOrange:hover {
         background: linear-gradient(to right, #ffaa00 0%, #ffaa00 100%) !important;
+    }
+
+    /* HOVER STYLES FONT COLOR */
+    .hoverText:hover td, .hoverReport:hover td {
+        color: #000000 !important;
+    }
+    .hoverText:hover .hoverGtext {
+        color: #0dbd67 !important;
+    }
+    .hoverText:hover .hoverOtext {
+        color: #ff8300 !important;
     }
 
 </style>
@@ -109,8 +120,8 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em; padding: 0;">Hover State</td>
                         </tr>
                         <tr>
-                            <td class="revP1" height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67;"></td>
-                            <td class="revP3" height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300;"></td>
+                            <td class="hoverGreen" height="30" width="350" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67;"></td>
+                            <td class="hoverOrange" height="30" width="250" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300;"></td>
                         </tr>
                     </table>
                 </td>
@@ -126,16 +137,37 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                         </tr>
                         <tr>
                             <td width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #0dbd67; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
-                            <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #FF8300 100%); background-color: #FF8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
+                            <td width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300; color: #000000; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
                         </tr>
                         <tr>
                             <td align="right" valign="middle" width="300" style="color: #0dbd67; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$12,345.00</td>
-                            <td align="right" valign="middle" width="300" style="color: #FF8300; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$67,890.00</td>
+                            <td align="right" valign="middle" width="300" style="color: #ff8300; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$67,890.00</td>
                         </tr>
                     </table>
                 </td>
             </tr>
             <!-- end data bar labels -->
+
+            <!-- DATA BAR LABELS WITH HOVER STATE -->
+            <tr>
+                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; padding: 40px 0 0 0;">
+                    <table role="presentation" align="center" width="600" class="hoverText">
+                        <tr>
+                            <td align="left" style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em; padding: 0;">Labels with Hover State</td>
+                        </tr>
+                        <tr>
+                            <!-- Adjust linear-gradient to 90% in order to cover the text better -->
+                            <td class="test hoverGreen" width="300" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 90%); background-color: #0dbd67; color: #0dbd67; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
+                            <td class="test hoverOrange" width="300" align="right" style="background: linear-gradient(to right, #ffaa00 0%, #ff8300 100%); background-color: #ff8300; color: #ff8300; font-weight: 400; font-size: 14px; font-family: courier; line-height: 1.5em; margin: 0; padding: 0;" height="31">Label&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="hoverGtext" align="right" valign="middle" width="300" style="color: #ffffff; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$12,345.00</td>
+                            <td class="hoverOtext" align="right" valign="middle" width="300" style="color: #ffffff; font-weight: 600; font-size: 16px; font-family: courier; line-height: 1.5em; margin: 0; padding: 2px 0 0 0;">$67,890.00</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- end data bar labels with hover state -->
 
         </table>
 
@@ -162,8 +194,8 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
                                 <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q1</td>
-                                        <td class="revP1" width="460" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$77,241.12&nbsp;</td>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q1</td>
+                                        <td class="hoverGreen" width="460" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$77,241.12&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
@@ -172,8 +204,8 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
                                 <table role="presentation" width="271" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q1</td>
-                                        <td class="revP2" width="171" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$37,427.00&nbsp;</td>
+                                        <td class="hoverGray" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q1</td>
+                                        <td class="hoverGray" width="171" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$37,427.00&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
@@ -182,18 +214,18 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
                                 <table role="presentation" width="507" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q2</td>
-                                        <td class="revP1" width="407" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$69,981.10&nbsp;</td>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q2</td>
+                                        <td class="hoverGreen" width="407" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$69,981.10&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
-                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="329" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="146" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q2</td>
-                                        <td width="414" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;$20,184.22</td>
+                                        <td class="hoverGray" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q2</td>
+                                        <td width="129" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$45,368.44&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
@@ -202,18 +234,18 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
                                 <table role="presentation" width="380" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q3</td>
-                                        <td class="revP1" width="280" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$52,419.71&nbsp;</td>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q3</td>
+                                        <td class="hoverGreen" width="280" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$52,419.71&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
-                                <table role="presentation" width="181" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q3</td>
-                                        <td class="revP2" width="81" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">&nbsp;$24,912.18</td>
+                                        <td class="hoverGray" width="181" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q3</td>
+                                        <td width="379" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">&nbsp;$24,912.18</td>
                                     </tr>
                                 </table>
                             </td>
@@ -222,8 +254,8 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
                                 <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP1" width="85" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q4</td>
-                                        <td width="475" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0; text-align: left;" bgcolor="#ffffff" height="31">&nbsp;$11,713.17</td>
+                                        <td class="hoverGreen" width="114" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q4</td>
+                                        <td width="446" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0; text-align: left;" bgcolor="#ffffff" height="31">&nbsp;$15,713.17</td>
                                     </tr>
                                 </table>
                             </td>
@@ -232,8 +264,8 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td align="left" colspan="3" style="padding: 1px 20px 30px 20px;">
                                 <table role="presentation" width="245" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                        <td class="revP2" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q4</td>
-                                        <td class="revP2" width="145" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$33,761.31&nbsp;</td>
+                                        <td class="hoverGray" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q4</td>
+                                        <td class="hoverGray" width="145" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$33,761.31&nbsp;</td>
                                     </tr>
                                 </table>
                             </td>
@@ -243,6 +275,101 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
             </tr>
         </table>
         <!-- end sample summary report -->
+
+        <!-- SAMPLE SUMMARY REPORT WITH HOVER STATE -->
+
+        <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+            <tr>
+                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; padding: 40px 0 0 0;">
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600" class="hoverReport">
+                        <tr>
+                            <td align="left" style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em; padding: 0 0 0 20px;">Sample Summary Report with Hover State</td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q1</td>
+                                        <td class="hoverGreen" width="460" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 85%); background-color: #10ed81; color: #0dbd67; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$77,241.12&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
+                                <table role="presentation" width="271" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGray" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q1</td>
+                                        <td class="hoverGray" width="171" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 50%); background-color: #e2e6ef; color: #c5cedf; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$37,427.00&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
+                                <table role="presentation" width="507" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q2</td>
+                                        <td class="hoverGreen" width="407" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 85%); background-color: #10ed81; color: #0dbd67; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$69,981.10&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
+                                <table role="presentation" width="329" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGray" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q2</td>
+                                        <td class="hoverGray" width="129" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 60%); background-color: #e2e6ef; color: #c5cedf; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$45,368.44&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
+                                <table role="presentation" width="380" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q3</td>
+                                        <td class="hoverGreen" width="280" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 75%); background-color: #10ed81; color: #0dbd67; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$52,419.71&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 1px 20px 1px 20px;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGray" width="181" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q3</td>
+                                        <td width="379" align="left" style="background-color: #ffffff; color: #ffffff; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">&nbsp;$24,912.18</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 0 20px 0 20px;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGreen" width="114" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019 Q4</td>
+                                        <td width="446" style="color: #ffffff; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0; text-align: left;" bgcolor="#ffffff" height="31">&nbsp;$15,713.17</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="3" style="padding: 1px 20px 30px 20px;">
+                                <table role="presentation" width="245" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="hoverGray" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018 Q4</td>
+                                        <td class="hoverGray" width="145" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 40%); background-color: #e2e6ef; color: #c5cedf; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$33,761.31&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- end sample summary report with hover state -->
 
     </body>
 </html>
