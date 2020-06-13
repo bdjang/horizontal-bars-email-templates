@@ -131,6 +131,6 @@ You can add helpful information by including labels inside or underneath the dat
 
 ## Putting It All Together
 
-By combining all the different variations, you can create informative, visually appealing, and mobile responsive data bars in email templates without using images.
+By combining all the different variations, you can create informative, visually appealing, and interactive data bars in email templates without using images.
 
-![databar6](https://user-images.githubusercontent.com/6575035/82163820-56a0ce80-987b-11ea-956a-7974f514bf8b.png)
+![databar6](https://user-images.githubusercontent.com/6575035/84557181-e446d100-acf6-11ea-8e00-6321ba71ccd4.gif)
