@@ -1,6 +1,6 @@
 # Data Bars in Email Templates
 
-* [Vertical Data Bars in Email Templates](https://github.com/bdjang/vertical-bars-email-templates#vertical-data-bars-in-email-templates)
+* [Vertical Data Bars in Email Templates](https://github.com/bdjang/vertical-bars-email-templates)
 
 ## Background
 
