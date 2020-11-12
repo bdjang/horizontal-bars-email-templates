@@ -37,26 +37,14 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
     }
 
     /* HOVER STYLES LINEAR GRADIENT */
-    .hoverGreen:hover {
-        background: linear-gradient(to right, #10ed81 0%, #10ed81 100%) !important;
-    }
-    .hoverGray:hover {
-        background: linear-gradient(to right, #e2e6ef 0%, #e2e6ef 100%) !important;
-    }
-    .hoverOrange:hover {
-        background: linear-gradient(to right, #ffaa00 0%, #ffaa00 100%) !important;
-    }
+    .hoverGreen:hover { background: linear-gradient(to right, #10ed81 0%, #10ed81 100%) !important; }
+    .hoverGray:hover { background: linear-gradient(to right, #e2e6ef 0%, #e2e6ef 100%) !important; }
+    .hoverOrange:hover { background: linear-gradient(to right, #ffaa00 0%, #ffaa00 100%) !important; }
 
     /* HOVER STYLES FONT COLOR */
-    .hoverText:hover td, .hoverReport:hover td {
-        color: #000000 !important;
-    }
-    .hoverText:hover .hoverGtext {
-        color: #0dbd67 !important;
-    }
-    .hoverText:hover .hoverOtext {
-        color: #ff8300 !important;
-    }
+    .hoverText:hover td, .hoverReport:hover td { color: #000000 !important; }
+    .hoverText:hover .hoverGtext { color: #0dbd67 !important; }
+    .hoverText:hover .hoverOtext { color: #ff8300 !important; }
 
 </style>
 </head>
@@ -171,12 +159,11 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
         </table>
 
-        <!-- SAMPLE SUMMARY REPORT -->
-
+        <!-- SAMPLE BAR CHART -->
         <!-- Formula to calculate accurate data bar widths:
-            1. Set the largest data bar as your max length
-            2. Divide each other number by the largest data bar number (x/max_length)
-            3. Multiply by 560 (or the total width the data bars). That number is the total width of your data bar relative to your largest data bar
+            1. Set the largest number in your data set as your max length
+            2. Divide each other number by the largest number (x/max_length)
+            3. Multiply by 560 (or the max width of the data bars). This result is the total width of your data bar relative to your largest data bar
             4. Use '&nbsp;' to create spaces instead of using padding; padding extends the length of the data bar which creates an inaccurate result
             
             Example:
@@ -277,7 +264,6 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
         <!-- end sample summary report -->
 
         <!-- SAMPLE SUMMARY REPORT WITH HOVER STATE -->
-
         <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
             <tr>
                 <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; padding: 40px 0 0 0;">
