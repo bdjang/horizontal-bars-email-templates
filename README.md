@@ -1,4 +1,4 @@
-# Data Bars in Email Templates
+# Horizontal Data Bars in Email Templates
 
 * [Vertical Data Bars in Email Templates](https://github.com/bdjang/vertical-bars-email-templates)
 
